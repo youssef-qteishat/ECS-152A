@@ -25,6 +25,7 @@ def server():
 
         end_time = time.time()
         time_taken = end_time - start_time
+        print("time taken: ", time_taken)
         data = data.decode()
         msg = str(100*1024/time_taken).encode()
         server_socket.sendto(msg,addr)
